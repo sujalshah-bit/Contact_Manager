@@ -1,0 +1,180 @@
+ /* background - #635985 */
+ /* contact - #443C68 */
+ /* add info - #393053 */
+ /* #18122B */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500;700;900&family=Varela+Round&display=swap');
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ html{
+  font-size: 62.5%;
+ }
+ body{
+  font-size: 1.6rem;
+  background-color:#393E46 ;
+  color: #ffffffd4;
+  font-family: 'Poppins', sans-serif;
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Varela Round', sans-serif; */
+ }
+
+ .box{
+  display: flex;
+ }
+ .add_info{
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 35%;
+  border-right: 2px solid #fff;
+  /* background-color: red; */
+  height: 100vh;
+ }
+ .heading{
+  padding: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  /* background-color: rebeccapurple; */
+ }
+ .form_control{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30vh;
+  /* align-items: center; */
+  padding:0 10px ;
+  /* background-color: rgb(255, 145, 0); */
+ }
+.field{
+  display: flex;
+  /* width: 55%; */
+  gap: 10px;
+  /* background-color: yellowgreen; */
+}
+.field label{
+  width: 20%;
+}
+.field input{
+  outline: none;
+  border: none;
+  width: 60%;
+  padding: 5px;
+}
+.buttons{
+  display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  .btn{
+  background-color: #474e68;
+  color: white;
+  border: 2px solid #2c2f3acf;
+  padding: 8px;
+  font-size: 1.5rem;
+  width: 35%;
+  cursor: pointer;
+}
+
+
+/* ------------------------------------------------- */
+.contacts{
+  width: 65%;
+  padding: 8px;
+}
+.contact{
+  /* background-color: red; */
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  max-height: 100px;
+  margin-bottom: 15px;
+  align-items: center;
+  background-color: #20262E;
+}
+.avatar{
+  background-image: url('./images/user.png');
+  height: 55px;
+  width: 55px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #ffffff6a;
+  border-radius: 45%;
+}
+.avatar img{
+  height: 100px;
+  width: 100px;
+}
+.edit, .delete{
+  padding: 5px;
+  width:100px ;
+  font-size: 1.5rem;
+  background-color: #393E46;
+  color:white;
+  background-color: #53596e;
+  border: 2px solid #2c2f3acf;
+  cursor: pointer;
+
+}
+.contact_info{
+  padding: 3px;
+}
+
+
+
+@media (max-width:1020px){
+  .add_info{
+    width: 45%;
+  }
+  .field input{
+    width: 60%;
+    font-size: 1.4rem;
+  }
+  .contact_info{
+    font-size: 1.3rem;
+  }
+
+}
+@media (max-width:750px){
+  html{
+    font-size: 55%;
+  }
+  .box{
+    flex-direction: column;
+    
+  }
+  .add_info{
+    width: 100%;
+    top: 0;
+    height: 85%;
+    z-index: 1;
+    background-color:#393E46 ;
+
+  }
+  .contacts{
+    overflow: hidden;
+    width:100%;
+    height: 15%;
+    z-index: 0;
+
+  }
+  .field input {
+    width: 60%;
+}
+
+
+}
+@media (max-width:420px) {
+  .avatar{
+    height: 38px;
+    width: 42px;
+  }
+  .edit, .delete{
+    width: 57px;
+    padding: 7px;
+  }
+}
