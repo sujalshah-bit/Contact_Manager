@@ -5,11 +5,27 @@ import {useState,useEffect} from  'react';
 import MyContext from './Components/MyContext';
 
 function App() {
-  const [contacts, setContacts] = useState([])
-  // const [editTool, setEditTool] = useState({})
+  // To get Data from local storage 
+  const getData = () =>{
+    let list  =  localStorage.getItem('contacts')
+    if(list){
+      return JSON.parse(localStorage.getItem('contacts'))
+    }else{
+      return [];
+    }
+  }
+  const [contacts, setContacts] = useState(getData())
+ 
+  // To set Data To local storage 
+
+  useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contacts))
+  }, [contacts])
+
    const addItemToArray = (item) =>{
     setContacts([...contacts, item])
   }
+
   const deleteItemFromArray = (id) =>{
      const revisedContacts =  contacts.filter((elem)=>{
         return elem.id !== id
